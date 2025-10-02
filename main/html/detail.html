@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ filename }} - Write-up</title>
+    <link rel="stylesheet" href="/main/css/detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+</head>
+
+<body>
+    <div class="detail-container">
+        <!-- 1. 헤더 (제목 + 뒤로가기) -->
+        <div class="detail-header">
+            <a href="/main" class="back-btn">&larr; 목록으로</a>
+            <h1 class="detail-title">{{ filename | replace(".md", "") }}</h1>
+        </div>
+
+        <!-- 2. 마크다운 컨텐츠 -->
+        <article class="markdown-content">
+            {{ content | safe }}
+        </article>
+
+        <!-- 3. 하단 네비게이션 (선택사항) -->
+        <div class="bottom-nav">
+            <a href="/main" class="nav-btn">&larr; 목록으로 돌아가기</a>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="/main/css/index.css">
+</head>
+
+<body>
+    <div class="writeup-container">
+        <!-- 1. 메인 헤더 (제목) -->
+        <div class="main-header">
+            <h1 class="main-title">{{ title }}</h1>
+        </div>
+
+        <!-- 전체 파일 개수 정보 -->
+        <div class="file-count-info">
+            총 {{ totalItems }}개의 Write-up이 있습니다.
+        </div>
+
+        <!-- 2. Write-up 목록 출력 -->
+
+        <ul class="writeup-list">
+            {% for filename in fileList %}
+            <li class="list-item">
+                <a href="/main/detail?file={{ filename }}" class="file-link">
+                    <!-- 파일명에서 .md 확장자를 제거하고 보여줍니다. -->
+                    <span class="filename">{{ filename | replace(".md", "") }}</span>
+                    <span class="arrow-icon">&rarr;</span>
+                </a>
+            </li>
+            {% else %}
+            <!-- fileList가 비어 있을 경우 -->
+            <li class="no-content">
+                아직 등록된 Write-up 파일이 없습니다.
+            </li>
+            {% endfor %}
+        </ul>
+
+        <!-- 3. 페이지네이션 컨트롤 -->
+
+        <div class="pagination">
+            {% if totalPages > 1 %}
+            <!-- 전체 페이지 개수만큼 반복 -->
+            {% for i in range(1, totalPages + 1) %}
+            <!-- 현재 페이지와 일치하면 current-page 클래스를 추가하여 강조합니다. -->
+            <a href="/main?page={{ i }}" class="page-btn {% if i == currentPage %}current-page{% endif %}">
+                {{ i }}
+            </a>
+            {% endfor %}
+            {% endif %}
+        </div>
+
+    </div>
+</body>
+
+</html>

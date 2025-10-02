@@ -1,0 +1,136 @@
+body {
+    /* 로그인 페이지와 통일된 배경색 */
+    background-color: #C7EAFE; 
+    /* 통일된 글꼴 색상 */
+    color: #1A374D;
+    font-family: 'Inter', sans-serif; /* Tailwind 대신 기본 폰트로 설정 */
+    margin: 0;
+    /* 콘텐츠를 화면 중앙에 배치 */
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.writeup-container {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 12px;
+    /* 부드러운 그림자 효과 */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 90%;
+    margin: 20px; /* 화면이 작아질 경우를 대비한 마진 */
+}
+
+.main-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.main-title {
+    font-size: 2.5em; 
+    font-weight: 800; 
+    color: #1a237e; /* 강조색 */
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e0f2ff; /* 제목 아래에 얇은 구분선 */
+}
+
+.file-count-info {
+    text-align: right;
+    font-size: 0.9em;
+    color: #6c757d;
+    margin-bottom: 15px;
+}
+
+.writeup-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border: 1px solid #e9ecef; /* 목록 전체를 감싸는 경계선 */
+    border-radius: 8px;
+    overflow: hidden; /* 경계선 내부에서 둥근 모서리 유지 */
+}
+
+.list-item {
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* 마지막 항목의 하단 구분선 제거 */
+.list-item:last-child {
+    border-bottom: none;
+}
+
+.file-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    text-decoration: none;
+    color: #1A374D;
+    font-weight: 600;
+    font-size: 1.1em;
+    background-color: #f8f9fa; /* 항목 기본 배경색 */
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+.file-link:hover {
+    /* 호버 시 색상 반전 및 살짝 들어가는 효과 */
+    background-color: #e0f2ff;
+    transform: translateX(5px);
+}
+
+.arrow-icon {
+    font-size: 1.2em;
+    color: #007bff;
+    transition: color 0.2s;
+}
+
+.file-link:hover .arrow-icon {
+    color: #1a237e;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.page-btn {
+    text-decoration: none;
+    color: #1A374D;
+    background-color: #f0f8ff;
+    padding: 8px 15px;
+    margin: 0 5px;
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.page-btn:hover:not(.current-page) {
+    background-color: #e2f2ff;
+    transform: translateY(-2px);
+}
+
+/* 현재 페이지 강조 스타일 */
+.current-page {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+    cursor: default;
+}
+
+.current-page:hover {
+    background-color: #007bff; /* 호버해도 색상 유지 */
+}
+
+/* 목록이 비어있을 때 메시지 스타일 */
+.no-content {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+    font-style: italic;
+}
+

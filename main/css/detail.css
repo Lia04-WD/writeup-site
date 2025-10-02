@@ -1,0 +1,224 @@
+body {
+    background-color: #C7EAFE;
+    color: #1A374D;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px 0;
+}
+
+.detail-container {
+    background-color: #FFFFFF;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    width: 90%;
+    margin: 20px;
+}
+
+.detail-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #e0f2ff;
+}
+
+.back-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 600;
+    font-size: 0.95em;
+    margin-bottom: 15px;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.back-btn:hover {
+    color: #1a237e;
+    transform: translateX(-3px);
+}
+
+.detail-title {
+    font-size: 2.2em;
+    font-weight: 800;
+    color: #1a237e;
+    margin: 0;
+    word-break: break-word;
+}
+
+/* 마크다운 컨텐츠 스타일링 */
+.markdown-content {
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.markdown-content h1 {
+    font-size: 2em;
+    font-weight: 700;
+    color: #1a237e;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.3em;
+    border-bottom: 2px solid #e0f2ff;
+}
+
+.markdown-content h2 {
+    font-size: 1.6em;
+    font-weight: 700;
+    color: #1a237e;
+    margin-top: 1.3em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-content h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-top: 1.2em;
+    margin-bottom: 0.5em;
+}
+
+.markdown-content p {
+    margin: 1em 0;
+}
+
+.markdown-content a {
+    color: #007bff;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: border-color 0.2s;
+}
+
+.markdown-content a:hover {
+    border-bottom-color: #007bff;
+}
+
+.markdown-content code {
+    background-color: #f8f9fa;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    color: #e83e8c;
+}
+
+.markdown-content pre {
+    background-color: #1f2937;
+    padding: 15px;
+    border-radius: 8px;
+    overflow-x: auto;
+    border-left: 4px solid #007bff;
+    margin: 1.5em 0;
+}
+
+.markdown-content pre code {
+    background-color: transparent;
+    padding: 0;
+    color: #e5e7eb;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+}
+
+.markdown-content ul,
+.markdown-content ol {
+    margin: 1em 0;
+    padding-left: 2em;
+}
+
+.markdown-content li {
+    margin: 0.5em 0;
+}
+
+.markdown-content blockquote {
+    margin: 1.5em 0;
+    padding: 10px 20px;
+    background-color: #f0f8ff;
+    border-left: 4px solid #007bff;
+    color: #5a6c7d;
+    font-style: italic;
+}
+
+.markdown-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 1.5em 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.markdown-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.5em 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.markdown-content th,
+.markdown-content td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #e9ecef;
+}
+
+.markdown-content th {
+    background-color: #f0f8ff;
+    font-weight: 600;
+    color: #1a237e;
+}
+
+.markdown-content tr:hover {
+    background-color: #f8f9fa;
+}
+
+.markdown-content hr {
+    border: none;
+    border-top: 2px solid #e0f2ff;
+    margin: 2em 0;
+}
+
+/* 하단 네비게이션 */
+.bottom-nav {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #e9ecef;
+    text-align: center;
+}
+
+.nav-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #007bff;
+    background-color: #f0f8ff;
+    padding: 12px 30px;
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.nav-btn:hover {
+    background-color: #e2f2ff;
+    transform: translateY(-2px);
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .detail-container {
+        padding: 25px;
+    }
+
+    .detail-title {
+        font-size: 1.8em;
+    }
+
+    .markdown-content h1 {
+        font-size: 1.6em;
+    }
+
+    .markdown-content h2 {
+        font-size: 1.3em;
+    }
+}
