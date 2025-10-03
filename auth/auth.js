@@ -9,6 +9,10 @@ router.post('/verify', (req, res) => {
 
     if(flag){
         req.session.isPassed = true;
+        req.session.save((err) => {
+            if (err) return res.status(500).send('Sessoin Error!');
+        });
+
         return res.redirect('/main');
     }
     else res.status(401).json({msg: 'Invalid Password!'})
