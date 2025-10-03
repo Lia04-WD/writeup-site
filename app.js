@@ -10,6 +10,7 @@ const mainRouter = require('./mainRouter');
 
 const app = express();
 app.set('port', process.env.PORT);
+app.set('trust proxy', 1);
 
 nunjucks.configure('main/html', {
     express: app,
